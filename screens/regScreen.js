@@ -17,5 +17,6 @@ const styles = StyleSheet.create({
     },
     containerTitle: {
       alignItems:'center',
+      backgroundColor: colors.background
     }
   })
