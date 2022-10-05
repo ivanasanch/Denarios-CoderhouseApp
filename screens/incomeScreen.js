@@ -26,7 +26,6 @@ const IncomeScreen = () => {
   return (
       <View style={styles.container}>
         <AddItem title ={'Ingresos'} text = {textItem} mount = {mountItem} onChangeT={onHandlerChangeItem} onChangeM = {onHandlerChangeMount} onAdd ={add}/>
-        <List values={itemList} del = {del} />
       </View>
 
   )
@@ -34,6 +33,7 @@ const IncomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 50,
     paddingHorizontal:50,
     backgroundColor: colors.background
   },

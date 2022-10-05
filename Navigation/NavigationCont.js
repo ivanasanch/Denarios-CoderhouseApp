@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ExpensesScreen from '../screens/expensesScreen';
+import ExpensesScreen from '../screens/ExpensesScreen';
 import IncomeScreen from '../screens/incomeScreen';
 import RegScreen from '../screens/regScreen';
 import Home from "../screens/Home";
@@ -12,6 +12,7 @@ const AppNav = () => {
             <Stack.Screen name="Egresos" component={ExpensesScreen}/>
             <Stack.Screen name="Ingresos" component={IncomeScreen}/>
             <Stack.Screen name="Registros" component={RegScreen}/>
+            
         </Stack.Navigator>
     )
 }

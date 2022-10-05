@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { StyleSheet, View} from 'react-native';
-import List from '.././components/List';
-import AddItem from '.././components/addItem';
-import { colors } from ".././Constants/Colors";
+import List from '../components/List';
+import AddItem from '../components/addItem';
+import { colors } from "../Constants/Colors";
 const ExpensesScreen = () => {
   const [textItem, setTextItem] = useState('')
   const [mountItem, setMountItem] = useState('')
@@ -27,13 +27,13 @@ const ExpensesScreen = () => {
     
       <View style={styles.container}>
         <AddItem title ={'Egresos'}  text = {textItem} mount = {mountItem} onChangeT={onHandlerChangeItem} onChangeM = {onHandlerChangeMount} onAdd ={add}/>
-        <List values={itemList} del = {del} />
       </View>
   )
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 50,
     paddingHorizontal:50,
     backgroundColor: colors.background
   }

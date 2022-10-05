@@ -1,19 +1,10 @@
 import React, {useState} from 'react';
 import { StyleSheet, View, Text} from 'react-native';
-import { Icon,Button } from '@rneui/themed';
+import { Button } from '@rneui/themed';
 import { colors } from ".././Constants/Colors";
 const Home = ({navigation})=>{
-
-/*     const [expenses, setExpenses] = useState(false)
-    const [income, setIncome] = useState(false)
-    const [reg, setReg] = useState(false)
-    const onBack = () =>{
-        setExpenses(false)
-        setIncome(false)
-        setReg(false)
-    } */
       let content = 
-        <View>
+        <View style= {styles.container}>
           <View style={styles.containerTitle}>
             <Text style={styles.text}>Denarios</Text>
           </View>
@@ -25,7 +16,6 @@ const Home = ({navigation})=>{
               <View style= {styles.container}>
                 {content}
               </View>
-
         )
       }
       
