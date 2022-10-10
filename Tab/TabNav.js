@@ -4,8 +4,8 @@ import ExpensesScreen from '../screens/ExpensesScreen';
 import IncomeScreen from '../screens/incomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from "../screens/Home";
+import NavigationData from "../Navigation/NavigationData";
 import { colors } from "../Constants/Colors";
-import RegScreen from "../screens/regScreen";
 const Tab = createBottomTabNavigator();
 
 const TabNav = () => {
@@ -54,8 +54,10 @@ const TabNav = () => {
                     />
                 ),
             }}/>
-             <Tab.Screen name = 'Registros' component={RegScreen} options={{
-                title:'Registros',
+             <Tab.Screen name = 'Datos' 
+             component={NavigationData} 
+             options={{
+                title:'Datos',
                 tabBarIcon: ({ focused }) => (
                     <Ionicons 
                         name='list'

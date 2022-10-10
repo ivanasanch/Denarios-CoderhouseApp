@@ -4,19 +4,19 @@ import { Icon,Button } from '@rneui/themed';
 import { colors } from ".././Constants/Colors";
 
 const List = (props)=> {
-    const {values, del} = props
+    const {values} = props
     return(
         <View>
             <FlatList 
             data={values}
             renderItem={data =>(
             <TouchableHighlight>
-              <View style={styles.itemListContainer}>
+              <View style={data.item.type===0?styles.itemListContainer:styles.itemListContainerI}>
                 <View>
                   <Text style={styles.itemListText}>Descripcion: {data.item.text}</Text>
                   <Text style={styles.itemListText}>Monto: ${data.item.mount}</Text>
                 </View>
-                <Button buttonStyle={{backgroundColor:'transparent'}} onPress={del.bind(this, data.item.id)}>
+                <Button buttonStyle={{backgroundColor:'transparent'}} /* onPress={del.bind(this, data.item.id)} */>
                   <Icon name='delete' color="#F7F0F5"/>
                 </Button>
               </View>
@@ -71,5 +71,14 @@ export default List;
           borderBottomColor:colors.white,
           borderBottomWidth:2,
           borderRadius:5 
-      }
+      },
+      itemListContainerI:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        backgroundColor: colors.violet,
+        borderBottomColor:colors.white,
+        borderBottomWidth:2,
+        borderRadius:5 
+    }
       })

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { StyleSheet, View} from 'react-native';
-import List from '../components/List';
 import AddItem from '../components/addItem';
 import { colors } from "../Constants/Colors";
 const ExpensesScreen = () => {
@@ -12,17 +11,15 @@ const ExpensesScreen = () => {
     setTextItem(i)
   }
   const onHandlerChangeMount = (i) => {
-    setMountItem(i)
+    setMountItem(i*-1)
+    
   }
   const add = () => {
     setItemList(currentItems=>[...currentItems, {id: Math.random().toString(), text:textItem, mount: mountItem}])
     setTextItem('')
     setMountItem('')
-  }
-  const del = id => { 
-    setItemList(currentItems=>currentItems.filter(item=>item.id !== id))
-  }
 
+  }
   return (
     
       <View style={styles.container}>
